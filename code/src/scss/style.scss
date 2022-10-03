@@ -1,0 +1,656 @@
+@import "fonts";
+@import "null";
+@import "header";
+@import "formul";
+@import "footer";
+
+.wrapper {
+    width: 100%;
+    height: auto;
+}
+
+.container {
+    //max-width: 1400px;
+    margin: 0 auto;
+}
+
+.parallax {
+    min-height: 120vh;
+}
+.parallax__body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    min-height: 120vh;
+    background: rgba(64, 78, 237, 1);
+    margin: 0;
+    padding: 0;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    padding: 80px 150px;
+    align-items: flex-start;
+    z-index: 1;
+    position: absolute;
+    &__title {
+        display: flex;
+        align-items: center;
+        font-size: 64px;
+        color: #fff;
+        padding: 0px 0px 21px 0px;
+        h1 {
+            padding: 0px 0px 0px 30px;
+            font-family: "Inter";
+            font-style: normal;
+            font-weight: 700;
+            line-height: 77px;
+        }
+    }
+    &__descreption {
+        display: flex;
+        flex-direction: column;
+    }
+    &__btn {
+    }
+}
+.title {
+    &__icon {
+    }
+}
+
+.descreption {
+    &__title {
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 48px;
+        color: #ffffff;
+        padding: 0px 0px 20px 0px;
+    }
+    &__list {
+        padding: 0px 0px 80px 30px;
+    }
+    &__item {
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 29px;
+        color: #ffffff;
+        list-style: disc;
+    }
+}
+
+.btn-main {
+    color: rgba(49, 49, 49, 1);
+    font-size: 40px;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 100px;
+    transition: all 0.5s ease 0s;
+    &:hover{
+        background: rgba(49, 49, 49, 1);
+        color: #ffffff;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+    &:hover::before{
+        color: #ffffff;
+    }
+    &:before {
+        transition: all 0.5s ease 0s;
+        padding: 0px 20px 0px 0px;
+        color: rgba(49, 49, 49, 1);
+    }
+    span{
+        font-size: 40px;
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 40px;
+        text-align: center;
+        line-height: 48px;
+    }
+}
+
+.btn {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 20px 90px;
+    border-radius: 40px;
+    
+    @media (max-width: $md1) {
+        padding: 10px 60px;
+    }
+}
+
+.content {
+    margin: 0px 0px 0px 0px;
+    width: 100%;
+    height: 160vh;
+    position: relative;
+   //overflow: hidden;
+    background-color: #ffffff;
+    z-index: 5;
+}
+.content-bottom{
+    margin: 0px 0px 0px 0px;
+    width: 100%;
+    height: 160vh;
+    position: relative;
+    //overflow: hidden;
+    background-color: #D3D3D3;
+    z-index: 4;
+}
+
+//<Бэк_Анимация_облака_звёзды==============================================================
+
+.parallax-star {
+    width: 100%;
+    height: 120vh;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+}
+
+.parallax-cloud {
+    width: 100%;
+    height: 120vh;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+}
+
+.image-star {
+    &:nth-child(1) {
+        position: absolute;
+        width: 100%;
+        height: 92px;
+        background: url(../img/star-right-top.png);
+        background-repeat: no-repeat;
+        background-position: right top;
+        right: 5%;
+        top: 20%;
+    }
+    &:nth-child(2) {
+        position: absolute;
+        width: 100%;
+        height: 103px;
+        background: url(../img/star-left-top.png);
+        background-repeat: no-repeat;
+        background-position: left top;
+        left: 14.6%;
+        top: 4.4%;
+    }
+    &:nth-child(3) {
+        position: absolute;
+        width: 100%;
+        height: 106px;
+        background: url(../img/star-left-bottom.png);
+        background-repeat: no-repeat;
+        background-position: left bottom;
+        left: 2.6%;
+        bottom: 34%;
+    }
+    &:nth-child(4) {
+        position: absolute;
+        width: 100%;
+        height: 77px;
+        background: url(../img/star-middle.png);
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        left: 2.6%;
+        bottom: 27%;
+    }
+    &:nth-child(5) {
+        position: absolute;
+        width: 100%;
+        height: 92px;
+        background: url(../img/star-right-bottom.png);
+        background-repeat: no-repeat;
+        background-position: right bottom;
+        right: 12%;
+        bottom: 36%;
+    }
+}
+.star-middle{
+    &:nth-child(1){
+        position: absolute;
+        width: 100%;
+        height: 103px;
+        background: url(../img/right-page-middle-top.png);
+        background-repeat: no-repeat;
+        background-position: right top;
+        right: 2%;
+        top: 25%;
+    }
+    &:nth-child(2){
+        position: absolute;
+        width: 100%;
+        height: 106px;
+        background: url(../img/star-left-bottom.png);
+        background-repeat: no-repeat;
+        background-position: left top;
+        left: 2%;
+        top: 5%;
+    }
+    &:nth-child(3){
+        position: absolute;
+        width: 100%;
+        height: 77px;
+        background: url(../img/star-middle.png);
+        background-repeat: no-repeat;
+        background-position: center top;
+       
+        top: 60%;
+    }
+}
+
+.star-bottom{
+    &:nth-child(1){
+        position: absolute;
+        width: 100%;
+        height: 77px;
+        background: url(../img/mini-star-left-top.png);
+        background-repeat: no-repeat;
+        background-position: left top;
+        left: 30%;
+        top: 2%;
+    }
+    &:nth-child(2){
+        position: absolute;
+        width: 100%;
+        height: 105px;
+        background: url(../img/bottom-foot-top.png);
+        background-repeat: no-repeat;
+        background-position: left top;
+        left: 5%;
+        top: 9%;
+    }
+}
+.image-cloud {
+    &:nth-child(1) {
+        position: absolute;
+        width: 100%;
+        height: 149px;
+        background: url(../img/cloud-right.png);
+        background-repeat: no-repeat;
+        background-position: right top;
+        right: 2%;
+        top: 1%;
+    }
+    &:nth-child(2) {
+        position: absolute;
+        width: 100%;
+        height: 246px;
+        background: url(../img/left-land.png);
+        background-repeat: no-repeat;
+        background-position: left bottom;
+        left: 0%;
+        bottom: 0%;
+    }
+    &:nth-child(3) {
+        position: absolute;
+        width: 100%;
+        height: 106px;
+        background: url(../img/left-middle-land.png);
+        background-repeat: no-repeat;
+        background-position: left bottom;
+        left: 8%;
+        bottom: 0%;
+    }
+    &:nth-child(4) {
+        position: absolute;
+        width: 100%;
+        height: 105px;
+        background: url(../img/right-middle-land.png);
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        left: 15%;
+        bottom: 0%;
+    }
+    &:nth-child(5) {
+        position: absolute;
+        width: 100%;
+        height: 342px;
+        background: url(../img/right-lands.png);
+        background-repeat: no-repeat;
+        background-position: right bottom;
+        right: 0%;
+        bottom: 0%;
+    }
+    &:nth-child(6) {
+        position: absolute;
+        width: 100%;
+        height: 64px;
+        background: url(../img/cloud-left.png);
+        background-repeat: no-repeat;
+        background-position: left top;
+        left: 0%;
+        top: 17.6%;
+    }
+}
+
+//<CLOSE_Бэк_Анимация_о блака_звёзды==============================================================
+
+//<Анимация текста===================================================
+
+.effect {
+    width: 100%;
+    //background: url() 50% 50% no-repeat;
+    background-size: contain;
+    display: flex;
+    align-items: center;
+    a {
+        font-weight: 700;
+        //text-shadow: 1px 1px 0px #fff;
+        text-align: center;
+        margin: 0;
+        color: #ffffff;
+        //background: url(https://i.imgur.com/jGIGWOA.jpg) repeat fixed;
+        background: url(../img/thumb_l_psh_0000223.jpg) repeat fixed;
+        -webkit-background-clip: text;
+        background-clip: text;
+
+        -webkit-text-fill-color: transparent;
+        text-fill-color: transparent;
+        animation: bps 20s infinite linear;
+    }
+    h1 {
+        font-weight: 700;
+        //text-shadow: 1px 1px 0px #fff;
+        text-align: center;
+        margin: 0;
+        color: #ffffff;
+        //background: url(https://i.imgur.com/jGIGWOA.jpg) repeat fixed;
+        background: url(../img/space-text.jpg) repeat fixed;
+        -webkit-background-clip: text;
+        background-clip: text;
+        cursor: default;
+        -webkit-text-fill-color: transparent;
+        text-fill-color: transparent;
+        animation: bp 8s infinite linear;
+    }
+}
+@keyframes bp {
+    100% {
+        background-position: 0% 161px;
+    }
+    0% {
+        background-position: 0% 0px;
+    }
+}
+
+@keyframes bps {
+    100% {
+        background-position: 0% 700px;
+    }
+    0% {
+        background-position: 0% 0px;
+    }
+}
+
+
+.effect-title {
+    width: 100%;
+    //background: url() 50% 50% no-repeat;
+    background-size: contain;
+    display: flex;
+    align-items: center;
+    a {
+        font-weight: 700;
+        //text-shadow: 1px 1px 0px #fff;
+        text-align: center;
+        margin: 0;
+        color: #ffffff;
+        background: url(https://i.imgur.com/jGIGWOA.jpg) repeat fixed;
+        //background: url(../img/thumb_l_psh_0000223.jpg) repeat fixed;
+        -webkit-background-clip: text;
+        background-clip: text;
+
+        -webkit-text-fill-color: transparent;
+        text-fill-color: transparent;
+        animation: bps1 20s infinite linear;
+    }
+    h2 {
+        font-weight: 700;
+        //text-shadow: 1px 1px 0px #fff;
+        text-align: center;
+        margin: 0;
+        color: #ffffff;
+        background: url(https://i.imgur.com/jGIGWOA.jpg) repeat fixed;
+        //background: url(../img/space-text.jpg) repeat fixed;
+        -webkit-background-clip: text;
+        background-clip: text;
+        cursor: default;
+        -webkit-text-fill-color: transparent;
+        text-fill-color: transparent;
+        animation: bp2 8s infinite linear;
+    }
+}
+@keyframes bp2 {
+    100% {
+        background-position: 0% 552px;
+    }
+    0% {
+        background-position: 0% 0px;
+    }
+}
+
+@keyframes bps1 {
+    100% {
+        background-position: 0% 552px;
+    }
+    0% {
+        background-position: 0% 0px;
+    }
+}
+//<==============================================================
+
+.content {
+    font-family: "Inter";
+    font-style: normal;
+    width: 100%;
+    &__body {
+        height: 100%;
+    }
+    &__container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 83px 0px;
+    }
+    &__star {
+    }
+}
+.content-bottom {
+    font-family: "Inter";
+    font-style: normal;
+    
+    width: 100%;
+    &__body {
+       height: 100%;
+        
+    }
+    &__container {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 83px 0px;
+        height: 100%;
+    }
+    &__star {
+    }
+}
+
+.column-left {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    color: rgba(49, 49, 49, 1);
+    &__title {
+        color: rgba(49, 49, 49, 1);
+        padding: 0px 0px 30px 0px;
+        font-size: 64px;
+        line-height: 77px;
+        z-index: 6;
+    }
+    &__subtitle {
+    }
+}
+
+.effect-title {
+    display: flex;
+    align-items: center;
+    h2 {
+        font-weight: 700;
+    }
+}
+.title-icon {
+    &::before {
+        padding: 0px 30px 0px 0px;
+        color: rgba(49, 49, 49, 1);
+    }
+}
+
+.subtitle-title {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+    color: #313131;
+    padding: 0px 0px 20px 0px;
+}
+.subtitle-list {
+    padding: 0px 0px 30px 20px;
+}
+.subtitle-item {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    color: #313131;
+    list-style: disc;
+}
+.subtitle-btn {
+    padding: 20px 90px;
+    background: #313131;
+    color: #ffffff;
+    border-radius: 40px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    font-size: 40px;
+    transition: all 0.5s ease 0s;
+    @media (max-width: $md1) {
+        padding: 10px 45px;
+        font-size: 2em;
+    }
+    &:hover{
+        color: #313131;
+        background: rgb(255, 255, 255, .7);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+    &::before{
+        transition: all 0.5s ease 0s;
+    }
+    &:hover::before{
+        color: #313131;
+    }
+    span {
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 48px;
+        padding: 0px 0px 0px 20px; 
+        @media (max-width: $md1) {
+            font-size: 1.2em;
+        }
+    }
+}
+
+.btn-icon {
+    padding: 0px 0px 0px 0px;
+    color: #ffffff;
+    font-size: 40px;
+    @media (max-width: $md1) {
+        font-size: 2em;
+    }
+}
+
+
+.column-right {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px 40px;
+    &__block {
+        background: rgba(49, 49, 49, 1);
+        padding: 20px 55px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        border-radius: 50px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        backdrop-filter: blur(65px);
+        margin: 0px 0px 50px 0px;
+        &:last-child{
+            margin: 0px 0px 0px 0px;
+        }
+    }
+    &__title {
+        padding: 0px 0px 40px 0px;
+        h2 {
+            font-family: "Inter";
+            font-style: normal;
+            font-weight: 700;
+            font-size: 64px;
+            line-height: 77px;
+            color: #313131;
+        }
+    }
+}
+
+.block {
+    &__title {
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 39px;
+        color: #ffffff;
+        padding: 0px 0px 25px 0px;
+        h2 {
+            padding: 0px 10px 0px 0px;
+        }
+    }
+    &__txt {
+        
+    }
+}
+.block__title {
+}
+.block-icon {
+}
+.block-title {
+}
+.block__txt {
+}
+.txt-item {
+    font-family: "Inter";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        color: #a7a7a7;
+        text-align: start;
+}
+
+
